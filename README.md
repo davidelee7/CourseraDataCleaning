@@ -1,23 +1,23 @@
-File Name: ReadMe.txt
+*File Name: ReadMe.txt*
 
-Author: David Lee
+*Author: David Lee*
 
-Data: 17 March 2013
+*Data: 17 March 2013*
 
-Purpose: 
+*Purpose:*
 
 The purpose of this ReadMe file is to describe the run_analysis.R script to which this
 		 file is associated and the logic used to process the data.  The data set is downloaded from the UCI machine learning repository at 
 		 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
 		 
-Data Set Information:
+*Data Set Information:*
 
 The information about the data set as provided by the data source is as follows:
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-Processing steps.  
+*Processing steps.*  
 
 An outline of the processing steps is incorporated into the script as comments.
 As a first step a working directly was established.  The script checks to see if the directory 
