@@ -55,7 +55,13 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 * tBodyGyroMean
 * tBodyGyroJerkMean
 
-The complete list of variables of each feature vector in the raw data set is listed at the end of this document.  All fields were imported into an R data frame for processing.  Those fields with 'mean' or 'std' in the data set were retained and the variable name was cleaned up to meet R standards for being syntactically correct.  This includes removing characters such as dashes, underscored and parenthesis.  As the only non-alphanumeric character considered syntactically correct is the period, this was used in the final output to separate the 'mean' prefix from the variable name as some of the variables had mean within their name.  The prefix indicates the records have been aggregated accross the activity and subject to create an average score for each subject engaging in each activity.  This provides discrete averages for each possible combination, thus meeting the requirements of tidy data for 1. Each variable forming a column.  2. Each observation forming a row.  In this case the requriement is for an aggregated observation that generates a single score for each subject and activity.  3.  Each type of observational unit forms a table.  The the final table exists within the dataSummary data frame and has been extracted as dataSummary.txt.
+The complete list of variables of each feature vector in the raw data set is included in the documentation that comes with the data set.  All fields were imported into an R data frame for processing.  Those fields with 'mean' or 'std' in the data set were retained.
+
+The variable names were cleaned up to meet R standards for being syntactically correct.  This includes removing characters such as dashes, underscored and parenthesis.  As the only non-alphanumeric character considered syntactically correct is the period, this was used in the final output to separate the 'mean' prefix from the variable name as some of the variables had mean within their name.  The prefix indicates the records have been aggregated accross the activity and subject to create an average score for each subject engaging in each activity.  
+
+The restult provides discrete averages for each possible combination, thus meeting the requirements of tidy data for 1. Each variable forming a column.  
+2. Each observation forming a row.  In this case the requriement is for an aggregated observation that generates a single score for each subject and activity.  
+3. Each type of observational unit forms a table.  The the final table exists within the dataSummary data frame and has been extracted as dataSummary.txt.
 
 The variables in the final output file are are: 
 
