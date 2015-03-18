@@ -4,8 +4,6 @@
 
 **Data: 17 March 2013**
 
-
-
 **Purpose:**
 
 The purpose of this ReadMe file is to describe the run_analysis.R script to which this
