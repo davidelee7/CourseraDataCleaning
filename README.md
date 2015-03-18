@@ -5,8 +5,7 @@ Author: David Lee
 Data: 17 March 2013
 
 Purpose: The purpose of this ReadMe file is to describe the run_analysis.R script to which this
-		 file is associated and the logic used to process the data.  The data set processed is  
-		 a data set downloaded from the UCI machine learning repository at
+		 file is associated and the logic used to process the data.  The data set processed is a data set downloaded from the UCI machine learning repository at 
 		 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
 		 
 Data Set Information:
