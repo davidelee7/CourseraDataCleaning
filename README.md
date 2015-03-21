@@ -97,4 +97,8 @@ syntactically correct.  A final step replace the left parenthesis with a period 
 be in the column name.  The right parenthesis at the end of the column name was removed, resulting 
 in names that meet R's syntactically correct standards.
 
-
+As a final step the resulting summary data was output to a text file named dataSummary.txt.  The first
+column of the file is the activity grouping column that groups by the various activities, such as walking or
+standing.  The second column the subject grouping column.  The combination of the first and second column
+represents the grouped data for each subject during each activity.  Each subsequent column reports the mean
+of all the measurements made for the subject engaging in the respective activity.
