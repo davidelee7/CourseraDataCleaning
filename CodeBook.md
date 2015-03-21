@@ -1,10 +1,10 @@
 **Coursera Project Code Book**
 
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals *tAcc-XYZ* and *tGyro-XYZ*. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals *(tBodyAcc-XYZ and tGravityAcc-XYZ)* using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals *tAcc-XYZ* and *tGyro-XYZ*. These time domain signals (prefix 't' to denote time units) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals *(tBodyAcc-XYZ and tGravityAcc-XYZ)* using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals *(tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ)*. Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm *(tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag)*. 
 
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing *fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag.* (Note the 'f' to indicate frequency domain signals). 
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing *fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag.* (Note the 'f' to indicate frequency domain signals).  In subsequent processing the t prefix was replaced with 'time' and the f prefix was replaced with 'frequency' to insure the nature of the measurement units was clear. 
 
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
@@ -55,11 +55,11 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 * tBodyGyroMean
 * tBodyGyroJerkMean
 
-The complete list of variables of each feature vector in the raw data set is included in the documentation that comes with the data set.  All fields were imported into an R data frame for processing.  Those fields with 'mean' or 'std' in the data set were retained.
+The complete list of variables of each feature vector in the raw data set is included in the documentation that comes with the data set.  All fields were imported into an R data frame for processing.  Those fields with 'mean' or 'std' in the data set were retained for processing.  All other fields were discarded as not relevent to the current project.
 
-The variable names were cleaned up to meet R standards for being syntactically correct.  This includes removing characters such as dashes, underscored and parenthesis.  As the only non-alphanumeric character considered syntactically correct is the period, this was used in the final output to separate the 'mean' prefix from the variable name as some of the variables had mean within their name.  The prefix indicates the records have been aggregated accross the activity and subject to create an average score for each subject engaging in each activity.  
+The variable names were cleaned up to meet R standards for being syntactically correct.  This includes removing characters such as dashes, underscores and parenthesis.  Since the only non-alphanumeric character R standards considered syntactically correct is the period, this was used in the final output to separate the 'mean' prefix from the variable name, as some of the variables had mean within their name.  The prefix indicates the records have been aggregated accross the activity and subject to create an average measure for each subject engaging in each activity.
 
-The restult provides discrete averages for each possible combination, thus meeting the requirements of tidy data for
+The result provides discrete averages for each combination of activity and subject, thus meeting the requirements of tidy data:
 
 1. Each variable forming a column.  
 2. Each observation forming a row.  In this case the requriement is for an aggregated observation that generates a single score for each subject and activity.  
